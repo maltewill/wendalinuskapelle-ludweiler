@@ -63,6 +63,28 @@
 
     </div>
 
+    <form id="candle-form" class="candle-form">
+      <div class="candle-field">
+        <label for="candle-name">Name (optional)</label>
+        <input type="text" id="candle-name" name="name" maxlength="60" placeholder="Ihr Name">
+      </div>
+      <div class="candle-field">
+        <label for="candle-message">Ihr Gedanke oder Gebet</label>
+        <textarea id="candle-message" name="message" maxlength="300" rows="3" required placeholder="…"></textarea>
+      </div>
+      <div class="candle-honeypot" aria-hidden="true">
+        <label for="candle-website">Website</label>
+        <input type="text" id="candle-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit" class="candle-submit">Kerze entzünden</button>
+      <p id="candle-status" class="candle-status" role="status"></p>
+    </form>
+
+    <h3 class="candle-list-heading">Zuletzt entzündete Kerzen</h3>
+    <ul id="candle-list" class="candle-list">
+      <li class="candle-empty">Kerzen werden geladen …</li>
+    </ul>
+
     <div class="panel">
       <h2>Kontakt</h2>
       <dl>
@@ -93,5 +115,6 @@
   </div>
 </footer>
 
+<script src="js/candle.js" defer></script>
 </body>
 </html>

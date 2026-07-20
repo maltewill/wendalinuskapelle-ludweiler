@@ -1,7 +1,7 @@
 (function () {
   var ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbwI8zU8jSzD-J3UMriu-xj_h5uFkhZd0GxEWbiY8MMNBny3n6Yq8ZqqvkYX7Wwvaa-M/exec";
   var THROTTLE_KEY = "kerze_last_submit";
-  var THROTTLE_MS = 60 * 1000;
+  var THROTTLE_MS = 60 * 60 * 1000;
 
   var form = document.getElementById("candle-form");
   var list = document.getElementById("candle-list");

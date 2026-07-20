@@ -47,7 +47,10 @@
   }
 
   function loadEntries() {
-    if (ENDPOINT_URL.indexOf("PASTE_") === 0) return;
+    if (ENDPOINT_URL.indexOf("PASTE_") === 0) {
+      list.innerHTML = '<li class="candle-empty">Das Kerzen-Formular wird bald freigeschaltet.</li>';
+      return;
+    }
     fetch(ENDPOINT_URL)
       .then(function (res) { return res.json(); })
       .then(renderEntries)
